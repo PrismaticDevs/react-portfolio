@@ -32,6 +32,11 @@ const btnStyle = {
   },
 };
 
+const appImg = {
+  width: "15rem",
+  border: ".15em solid #131e5a",
+};
+
 const style = {
   position: "absolute",
   top: "50%",
@@ -57,6 +62,7 @@ export const AppCard = (props) => {
               <Typography gutterBottom variant="h5">
                 {props.title}
               </Typography>
+              <img src={props.src} style={appImg} alt={props.title} />
             </CardContent>
             <CardActions>
               <Button

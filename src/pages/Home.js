@@ -1,5 +1,11 @@
 import { AppCard } from "../components/AppCard";
 import { Grid, Container } from "@mui/material";
+import crypto from "../img/crypto-cocktails.jpg";
+import generator from "../img/generator.jpg";
+import planner from "../img/planner.jpg";
+import reaction from "../img/reaction-timer.jpg";
+import weather from "../img/weather.jpg";
+import ticTacToe from "../img/tic-tac-toe.jpg";
 
 const frontEnd = {
   CryptoCocktails: {
@@ -9,6 +15,7 @@ const frontEnd = {
     technology: ["JavaScript"],
     app: "https://prismaticdevs.github.io/crypto-cocktails/",
     code: "https://github.com/prismaticdevs/crypto-cocktails",
+    src: crypto,
   },
   DayPlanner: {
     title: "Day Planner",
@@ -17,14 +24,16 @@ const frontEnd = {
     technology: [],
     app: "https://prismaticdevs.github.io/day-planner/",
     code: "https://github.com/prismaticdevs/day-planner/tree/master",
+    src: planner,
   },
   ReactionTimer: {
-    title: "Reaction Timer",
+    title: "Vue.js Reaction Timer",
     description:
       "This application sees how quickly a user can click a button once it appears. he app displays the speed at which the button was clicked as well as displaying a message based on the speed he button was clicked at.",
     technology: [],
     app: "https://prismatic-reaction-timer.netlify.app/",
     code: "https://github.com/PrismaticDevs/reaction-timer/tree/master",
+    src: reaction,
   },
   WeatherDashboard: {
     title: "Weather Dashboard",
@@ -33,6 +42,7 @@ const frontEnd = {
     technology: [],
     app: "https://prismaticdevs.github.io/weather_dashboard/",
     code: "https://github.com/PrismaticDevs/weather_dashboard",
+    src: weather,
   },
   TicTacToe: {
     title: "Vue.js Tic Tac Toe",
@@ -41,13 +51,15 @@ const frontEnd = {
     technology: [],
     app: "https://primatic-tic-tac-toe.netlify.app/",
     code: "https://github.com/prismaticdevs/TicTacToe/tree/master",
+    src: ticTacToe,
   },
   PasswordGenerator: {
-    title: "Random Password Generator",
+    title: "Password Generator",
     description: `This application allows a user to generate a random password. The user is first prompted if they want uppercase letters, numbers, or special characters. The user also must type in a numerical length. If the user fails to provide a numerical length, the process starts over. After the user responds to the prompts, the password is randomly generated and displayed on the screen. The user can then click the "Copy to Clipboard" button and the password will be copied.`,
     technology: [],
     app: "  https://prismaticdevs.github.io/password_generator/",
     code: "https://github.com/prismaticdevs/password_generator/tree/master",
+    src: generator,
   },
 };
 
@@ -62,6 +74,7 @@ const Home = () => {
             technology={frontEnd.CryptoCocktails.technology}
             code={frontEnd.CryptoCocktails.code}
             app={frontEnd.CryptoCocktails.app}
+            src={frontEnd.CryptoCocktails.src}
           ></AppCard>
           <AppCard
             title={frontEnd.DayPlanner.title}
@@ -69,6 +82,7 @@ const Home = () => {
             technology={frontEnd.DayPlanner.technology}
             code={frontEnd.DayPlanner.code}
             app={frontEnd.DayPlanner.app}
+            src={frontEnd.DayPlanner.src}
           ></AppCard>
           <AppCard
             title={frontEnd.ReactionTimer.title}
@@ -76,6 +90,7 @@ const Home = () => {
             technology={frontEnd.ReactionTimer.technology}
             code={frontEnd.ReactionTimer.code}
             app={frontEnd.ReactionTimer.app}
+            src={frontEnd.ReactionTimer.src}
           ></AppCard>
           <AppCard
             title={frontEnd.WeatherDashboard.title}
@@ -83,6 +98,7 @@ const Home = () => {
             technology={frontEnd.WeatherDashboard.technology}
             code={frontEnd.WeatherDashboard.code}
             app={frontEnd.WeatherDashboard.app}
+            src={frontEnd.WeatherDashboard.src}
           ></AppCard>
           <AppCard
             title={frontEnd.TicTacToe.title}
@@ -90,6 +106,7 @@ const Home = () => {
             technology={frontEnd.TicTacToe.technology}
             code={frontEnd.TicTacToe.code}
             app={frontEnd.TicTacToe.app}
+            src={frontEnd.TicTacToe.src}
           ></AppCard>
           <AppCard
             title={frontEnd.PasswordGenerator.title}
@@ -97,6 +114,7 @@ const Home = () => {
             technology={frontEnd.PasswordGenerator.technology}
             code={frontEnd.PasswordGenerator.code}
             app={frontEnd.PasswordGenerator.app}
+            src={frontEnd.PasswordGenerator.src}
           ></AppCard>
         </Grid>
       </Container>
