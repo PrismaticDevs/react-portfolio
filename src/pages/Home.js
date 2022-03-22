@@ -98,7 +98,6 @@ const Home = () => {
             code={frontEnd.PasswordGenerator.code}
             app={frontEnd.PasswordGenerator.app}
           ></AppCard>
-          <AppCard></AppCard>
         </Grid>
       </Container>
     </section>
