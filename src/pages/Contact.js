@@ -1,15 +1,16 @@
 import { Grid, Container } from "@mui/material";
+import SliderComponent from "../components/SliderComponent";
 
-const Contact = () => {
+const CarouselComponent = () => {
   return (
     <section>
       <Container sx={{ mt: 10 }}>
         <Grid>
-          <h1>Contact</h1>
+          <SliderComponent />
         </Grid>
       </Container>
     </section>
   );
 };
 
-export default Contact;
+export default CarouselComponent;

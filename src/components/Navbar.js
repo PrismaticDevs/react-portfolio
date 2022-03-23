@@ -29,8 +29,16 @@ const Navbar = () => {
     setAnchorEl(null);
   };
 
-  const goHome = () => {
-    window.location.href = "/";
+  const goFrontEnd = () => {
+    window.location.href = "/front";
+    handleClose();
+  };
+  const goBackEnd = () => {
+    window.location.href = "/back";
+    handleClose();
+  };
+  const goFull = () => {
+    window.location.href = "/full";
     handleClose();
   };
   const goAbout = () => {
@@ -74,7 +82,9 @@ const Navbar = () => {
           open={open}
           onClose={() => setAnchorEl(null)}
         >
-          <MenuItem onClick={() => goHome()}>Home</MenuItem>
+          <MenuItem onClick={() => goFrontEnd()}>Front End</MenuItem>
+          <MenuItem onClick={() => goBackEnd()}>Back End</MenuItem>
+          <MenuItem onClick={() => goFull()}>Full Stack</MenuItem>
           <MenuItem onClick={() => goAbout()}>About</MenuItem>
           <MenuItem onClick={() => goContact()}>Contact</MenuItem>
         </Menu>

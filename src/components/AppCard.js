@@ -25,16 +25,21 @@ const btnStyle = {
   primary: {
     background: b,
     color: "white",
+    marginLeft: 7,
   },
   secondary: {
     background: p,
     color: "white",
+    marginLeft: 7,
   },
 };
 
 const appImg = {
   width: "15rem",
+  height: "10rem",
   border: ".15em solid #131e5a",
+  borderRadius: ".25em",
+  boxShadow: ".15em .15em .15em .15em rgba(0,0,0,0.5)",
 };
 
 const style = {
@@ -66,6 +71,7 @@ export const AppCard = (props) => {
             </CardContent>
             <CardActions>
               <Button
+                className="btn"
                 href={props.code}
                 style={btnStyle.primary}
                 target="_blank"
@@ -73,13 +79,18 @@ export const AppCard = (props) => {
                 View Code
               </Button>
               <Button
+                className="btn"
                 href={props.app}
                 target="_blank"
                 style={btnStyle.secondary}
               >
                 View App
               </Button>
-              <Button onClick={handleOpen} style={btnStyle.info}>
+              <Button
+                className="btn"
+                onClick={handleOpen}
+                style={btnStyle.info}
+              >
                 Info
               </Button>
             </CardActions>
