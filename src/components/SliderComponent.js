@@ -132,103 +132,127 @@ function SwipeableTextMobileStepper() {
   };
 
   return (
-    <Box sx={{ maxWidth: 400, flexGrow: 1 }}>
-      <Paper
-        square
-        elevation={0}
+    <section
+      style={{
+        display: "flex",
+        justifyContent: "center",
+      }}
+    >
+      <Box
         sx={{
-          display: "flex",
-          alignItems: "center",
-          height: 50,
-          pl: 2,
-          bgcolor: "background.default",
+          maxWidth: 400,
+          flexGrow: 1,
         }}
       >
-        <Typography>{frontEnd[activeStep].title}</Typography>
-      </Paper>
-      <AutoPlaySwipeableViews
-        axis={theme.direction === "rtl" ? "x-reverse" : "x"}
-        index={activeStep}
-        onChangeIndex={handleStepChange}
-        autoplay={false}
-        enableMouseEvents
-      >
-        {frontEnd.map((appItem, index) => (
-          <Grid key={appItem.label} container>
-            <Grid>
-              {Math.abs(activeStep - index) <= 2 ? (
-                <Box
-                  component="img"
-                  sx={{
-                    height: 255,
-                    display: "block",
-                    maxWidth: 400,
-                    overflow: "hidden",
-                    width: "100%",
-                  }}
-                  src={appItem.src}
-                  alt={appItem.title}
-                />
-              ) : null}
-            </Grid>
-          </Grid>
-        ))}
-      </AutoPlaySwipeableViews>
-      <Grid container>
-        <Button target="_blank" href={frontEnd[activeStep].code}>
-          View Code
-        </Button>
-        <Button target="_blank" href={frontEnd[activeStep].app}>
-          View App
-        </Button>
-        <Button onClick={handleOpen}>Info</Button>
-      </Grid>
-      <MobileStepper
-        steps={maxSteps}
-        position="static"
-        activeStep={activeStep}
-        nextButton={
-          <Button
-            size="small"
-            onClick={handleNext}
-            disabled={activeStep === maxSteps - 1}
-          >
-            Next
-            {theme.direction === "rtl" ? (
-              <KeyboardArrowLeft />
-            ) : (
-              <KeyboardArrowRight />
-            )}
-          </Button>
-        }
-        backButton={
-          <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
-            {theme.direction === "rtl" ? (
-              <KeyboardArrowRight />
-            ) : (
-              <KeyboardArrowLeft />
-            )}
-            Back
-          </Button>
-        }
-      />
-      {/* Crypto Cocktails Modal */}
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
+        <Paper
+          square
+          elevation={0}
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            height: 50,
+            pl: 2,
+            bgcolor: "background.default",
+          }}
+        >
+          <Typography sx={{ fontSize: "1.5rem" }}>
             {frontEnd[activeStep].title}
           </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            {frontEnd[activeStep].description}
-          </Typography>
-        </Box>
-      </Modal>
-    </Box>
+        </Paper>
+        <AutoPlaySwipeableViews
+          axis={theme.direction === "rtl" ? "x-reverse" : "x"}
+          index={activeStep}
+          onChangeIndex={handleStepChange}
+          autoplay={false}
+          enableMouseEvents
+        >
+          {frontEnd.map((appItem, index) => (
+            <Grid key={appItem.label} container>
+              <Grid>
+                {Math.abs(activeStep - index) <= 2 ? (
+                  <Box
+                    component="img"
+                    sx={{
+                      height: 255,
+                      display: "block",
+                      maxWidth: 400,
+                      overflow: "hidden",
+                      width: "100%",
+                    }}
+                    src={appItem.src}
+                    alt={appItem.title}
+                  />
+                ) : null}
+              </Grid>
+            </Grid>
+          ))}
+        </AutoPlaySwipeableViews>
+        <Grid
+          container
+          style={{
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          <Button target="_blank" href={frontEnd[activeStep].code}>
+            View Code
+          </Button>
+          <Button target="_blank" href={frontEnd[activeStep].app}>
+            View App
+          </Button>
+          <Button onClick={handleOpen}>Info</Button>
+        </Grid>
+        <MobileStepper
+          steps={maxSteps}
+          position="static"
+          activeStep={activeStep}
+          nextButton={
+            <Button
+              size="small"
+              onClick={handleNext}
+              disabled={activeStep === maxSteps - 1}
+            >
+              Next
+              {theme.direction === "rtl" ? (
+                <KeyboardArrowLeft />
+              ) : (
+                <KeyboardArrowRight />
+              )}
+            </Button>
+          }
+          backButton={
+            <Button
+              size="small"
+              onClick={handleBack}
+              disabled={activeStep === 0}
+            >
+              {theme.direction === "rtl" ? (
+                <KeyboardArrowRight />
+              ) : (
+                <KeyboardArrowLeft />
+              )}
+              Back
+            </Button>
+          }
+        />
+        {/* Crypto Cocktails Modal */}
+        <Modal
+          open={open}
+          onClose={handleClose}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
+        >
+          <Box sx={style}>
+            <Typography id="modal-modal-title" variant="h6" component="h2">
+              {frontEnd[activeStep].title}
+            </Typography>
+            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+              {frontEnd[activeStep].description}
+            </Typography>
+          </Box>
+        </Modal>
+      </Box>
+    </section>
   );
 }
 
