@@ -21,13 +21,13 @@ const CarouselComponent = () => {
             justifyContent: "space-evenly",
           }}
         >
-          <div id="fe">
+          <div className="app" id="fe">
             <FrontEnd />
           </div>
-          <div id="be">
+          <div className="app" id="be">
             <BackEnd />
           </div>
-          <div id="fs">
+          <div className="app" id="fs">
             <FullStack />
           </div>
         </Grid>
