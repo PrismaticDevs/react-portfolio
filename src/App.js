@@ -5,6 +5,8 @@ import Contact from "./pages/Contact";
 import "./index.css";
 import { Route, Routes } from "react-router-dom";
 
+// Returns Routes and App
+
 function App() {
   return (
     <main className="App">
