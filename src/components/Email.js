@@ -35,7 +35,12 @@ const Email = () => {
     <>
       <form
         ref={form}
-        style={{ display: "flex", flexDirection: "column" }}
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          width: "33%",
+          margin: "0 auto",
+        }}
         onSubmit={sendEmail}
       >
         <InputLabel>Name</InputLabel>

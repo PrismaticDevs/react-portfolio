@@ -46,6 +46,16 @@ const CarouselComponent = () => {
             </Typography>
           </Grid>
         </Grid>
+        <Typography
+          sx={{
+            fontSize: "1.5rem",
+            color: "#131e5b",
+            textAlign: "center",
+            marginTop: 5,
+          }}
+        >
+          Leave a Message
+        </Typography>
         <Email />
       </Container>
     </section>
