@@ -2,6 +2,13 @@ import { Grid, Container, Typography, Button } from "@mui/material";
 import FrontEnd from "../components/FrontEnd";
 import BackEnd from "../components/BackEnd";
 import FullStack from "../components/FullStack";
+let mobile = false;
+const mobileView = () => {
+  if (window.innerWidth < 900) {
+    mobile = true;
+  }
+};
+mobileView();
 
 const CarouselComponent = () => {
   return (
@@ -25,19 +32,28 @@ const CarouselComponent = () => {
         >
           <div className="app" id="fe">
             <FrontEnd />
-            <Button onClick={() => (window.location.href = "#top")}>
+            <Button
+              style={mobile ? { display: "block" } : { display: "none" }}
+              onClick={() => (window.location.href = "#top")}
+            >
               Back to Top
             </Button>
           </div>
           <div className="app" id="be">
             <BackEnd />
-            <Button onClick={() => (window.location.href = "#top")}>
+            <Button
+              style={mobile ? { display: "block" } : { display: "none" }}
+              onClick={() => (window.location.href = "#top")}
+            >
               Back to Top
             </Button>
           </div>
           <div className="app" id="fs">
             <FullStack />
-            <Button onClick={() => (window.location.href = "#top")}>
+            <Button
+              style={mobile ? { display: "block" } : { display: "none" }}
+              onClick={() => (window.location.href = "#top")}
+            >
               Back to Top
             </Button>
           </div>
