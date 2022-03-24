@@ -17,9 +17,22 @@ const CarouselComponent = () => {
         <Typography variant="h2" sx={{ textAlign: "center" }}>
           Deployed Applications
         </Typography>
-        <Button onClick={() => (window.location.href = "#fe")}>Font End</Button>
-        <Button onClick={() => (window.location.href = "#be")}>Back End</Button>
-        <Button onClick={() => (window.location.href = "#fs")}>
+        <Button
+          style={mobile ? { display: "block" } : { display: "none" }}
+          onClick={() => (window.location.href = "#fe")}
+        >
+          Font End
+        </Button>
+        <Button
+          style={mobile ? { display: "block" } : { display: "none" }}
+          onClick={() => (window.location.href = "#be")}
+        >
+          Back End
+        </Button>
+        <Button
+          style={mobile ? { display: "block" } : { display: "none" }}
+          onClick={() => (window.location.href = "#fs")}
+        >
           FullStack
         </Button>
         <Grid
