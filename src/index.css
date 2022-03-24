@@ -12,3 +12,7 @@
 .item {
     margin-bottom: 2em;
 }
+
+.app {
+    scroll-margin-top: 5em;
+}
