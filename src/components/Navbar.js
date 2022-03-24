@@ -28,8 +28,12 @@ const Navbar = () => {
   const handleClose = () => {
     setAnchorEl(null);
   };
-  const goApps = () => {
+  const goAbout = () => {
     window.location.href = "/";
+    handleClose();
+  };
+  const goApps = () => {
+    window.location.href = "/apps";
     handleClose();
   };
   const goResume = () => {
@@ -73,6 +77,7 @@ const Navbar = () => {
           open={open}
           onClose={() => setAnchorEl(null)}
         >
+          <MenuItem onClick={() => goAbout()}>About</MenuItem>
           <MenuItem onClick={() => goApps()}>Apps</MenuItem>
           <MenuItem onClick={() => goResume()}>Resume</MenuItem>
           <MenuItem onClick={() => goContact()}>Contact</MenuItem>

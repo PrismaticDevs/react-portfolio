@@ -8,3 +8,7 @@
 .btn:hover {
     opacity: 0.75;
 }
+
+.item {
+    margin-bottom: 2em;
+}
