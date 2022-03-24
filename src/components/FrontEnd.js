@@ -20,29 +20,6 @@ import ticTacToe from "../img/tic-tac-toe.jpg";
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
-const images = [
-  {
-    label: "San Francisco – Oakland Bay Bridge, United States",
-    imgPath:
-      "https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60",
-  },
-  {
-    label: "Bird",
-    imgPath:
-      "https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60",
-  },
-  {
-    label: "Bali, Indonesia",
-    imgPath:
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250&q=80",
-  },
-  {
-    label: "Goč, Serbia",
-    imgPath:
-      "https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60",
-  },
-];
-
 const frontEnd = [
   {
     title: "Crypto and Cocktails",
@@ -105,7 +82,7 @@ function SwipeableTextMobileStepper() {
   const handleClose = () => setOpen(false);
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
-  const maxSteps = images.length;
+  const maxSteps = frontEnd.length;
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -125,7 +102,7 @@ function SwipeableTextMobileStepper() {
     left: "50%",
     transform: "translate(-50%, -50%)",
     width: 400,
-    bgcolor: "background.paper",
+    bgcolor: "background.default",
     border: "2px solid #000",
     boxShadow: 24,
     p: 4,
@@ -144,6 +121,9 @@ function SwipeableTextMobileStepper() {
           flexGrow: 1,
         }}
       >
+        <Typography sx={{ fontSize: "2rem", textAlign: "center" }}>
+          Front End
+        </Typography>
         <Paper
           square
           elevation={0}
@@ -152,7 +132,6 @@ function SwipeableTextMobileStepper() {
             alignItems: "center",
             height: 50,
             pl: 2,
-            bgcolor: "background.default",
           }}
         >
           <Typography sx={{ fontSize: "1.5rem" }}>
@@ -192,15 +171,32 @@ function SwipeableTextMobileStepper() {
           style={{
             display: "flex",
             justifyContent: "center",
+            background: "none",
           }}
         >
-          <Button target="_blank" href={frontEnd[activeStep].code}>
+          <Button
+            className="btn"
+            style={{ background: "#131E5B", color: "white", marginLeft: "1em" }}
+            target="_blank"
+            href={frontEnd[activeStep].code}
+          >
             View Code
           </Button>
-          <Button target="_blank" href={frontEnd[activeStep].app}>
+          <Button
+            className="btn"
+            style={{ background: "#006A4E", color: "white", marginLeft: "1em" }}
+            target="_blank"
+            href={frontEnd[activeStep].app}
+          >
             View App
           </Button>
-          <Button onClick={handleOpen}>Info</Button>
+          <Button
+            className="btn"
+            style={{ background: "#BC8F8F", color: "white", marginLeft: "1em" }}
+            onClick={handleOpen}
+          >
+            Info
+          </Button>
         </Grid>
         <MobileStepper
           steps={maxSteps}
