@@ -1,6 +1,6 @@
 import Navbar from "./components/Navbar";
 import Apps from "./pages/Apps";
-import About from "./pages/About";
+import Resume from "./pages/Resume";
 import Contact from "./pages/Contact";
 import "./index.css";
 import { Route, Routes } from "react-router-dom";
@@ -12,7 +12,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route exact path="/" element={<Apps />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/resume" element={<Resume />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </header>

@@ -32,8 +32,8 @@ const Navbar = () => {
     window.location.href = "/";
     handleClose();
   };
-  const goAbout = () => {
-    window.location.href = "/about";
+  const goResume = () => {
+    window.location.href = "/resume";
     handleClose();
   };
   const goContact = () => {
@@ -74,7 +74,7 @@ const Navbar = () => {
           onClose={() => setAnchorEl(null)}
         >
           <MenuItem onClick={() => goApps()}>Apps</MenuItem>
-          <MenuItem onClick={() => goAbout()}>About</MenuItem>
+          <MenuItem onClick={() => goResume()}>Resume</MenuItem>
           <MenuItem onClick={() => goContact()}>Contact</MenuItem>
         </Menu>
       </Toolbar>

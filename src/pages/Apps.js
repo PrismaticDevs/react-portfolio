@@ -7,9 +7,12 @@ const CarouselComponent = () => {
   return (
     <section>
       <Container sx={{ mt: 10 }}>
-        <Typography sx={{ fontSize: "2.5em", textAlign: "center" }}>
+        <Typography variant="h2" sx={{ textAlign: "center" }}>
           Deployed Applications
         </Typography>
+        <a href="#fe">Font End</a>
+        <a href="#be">Back End</a>
+        <a href="#fs">Full Stack</a>
         <Grid
           container
           sx={{
@@ -18,9 +21,15 @@ const CarouselComponent = () => {
             justifyContent: "space-evenly",
           }}
         >
-          <FrontEnd />
-          <BackEnd />
-          <FullStack />
+          <div id="fe">
+            <FrontEnd />
+          </div>
+          <div id="be">
+            <BackEnd />
+          </div>
+          <div id="fs">
+            <FullStack />
+          </div>
         </Grid>
       </Container>
     </section>
