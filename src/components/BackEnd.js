@@ -143,14 +143,6 @@ function SwipeableTextMobileStepper() {
           </Button>
           <Button
             className="btn"
-            style={{ background: "#006A4E", color: "white", marginLeft: "1em" }}
-            target="_blank"
-            href={backEnd[activeStep].app}
-          >
-            View App
-          </Button>
-          <Button
-            className="btn"
             style={{ background: "#BC8F8F", color: "white", marginLeft: "1em" }}
             onClick={handleOpen}
           >

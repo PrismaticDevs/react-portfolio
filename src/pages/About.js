@@ -28,11 +28,8 @@ const About = () => {
           <Typography variant="h3">Full Stack Web Developer</Typography>
         </div>
         <div className="item">
-          <Typography variant="h4">Location</Typography>
-          <Typography variant="h3">
-            Colorado Springs, CO{" "}
-            <Typography variant="h5">Open to Relocation</Typography>
-          </Typography>
+          <Typography variant="h3">Colorado Springs, CO</Typography>
+          <Typography variant="h5">Open to Relocation</Typography>
         </div>
       </Grid>
     </Container>
