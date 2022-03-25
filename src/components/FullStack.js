@@ -117,7 +117,7 @@ function SwipeableTextMobileStepper() {
           enableMouseEvents
         >
           {fullStack.map((appItem, index) => (
-            <Grid key={appItem.label} container>
+            <Grid key={index} container>
               <Grid>
                 {Math.abs(activeStep - index) <= 2 ? (
                   <Box

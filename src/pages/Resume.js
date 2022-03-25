@@ -1,4 +1,5 @@
 import { Grid, Container, Typography, List, ListItem } from "@mui/material";
+import Resume from "../files/Resume 2022.pdf";
 
 const About = () => {
   return (
@@ -75,7 +76,7 @@ const About = () => {
             <ListItem>Financial Reports and Projections</ListItem>
           </List>
           <div>
-            <a href="../files/Resume 2022.pdf" download>
+            <a href={Resume} download>
               Download as PDF
             </a>
           </div>

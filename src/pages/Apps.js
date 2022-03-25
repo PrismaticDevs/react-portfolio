@@ -1,4 +1,4 @@
-import { Grid, Container, Typography, Button } from "@mui/material";
+import { Grid, Typography, Button, Box } from "@mui/material";
 import FrontEnd from "../components/FrontEnd";
 import BackEnd from "../components/BackEnd";
 import FullStack from "../components/FullStack";
@@ -13,7 +13,7 @@ mobileView();
 const CarouselComponent = () => {
   return (
     <section>
-      <Container id="top" className="app" sx={{ mt: 10 }}>
+      <Box id="top" className="app" sx={{ mt: 10 }}>
         <Typography variant="h2" sx={{ textAlign: "center" }}>
           Deployed Applications
         </Typography>
@@ -43,7 +43,7 @@ const CarouselComponent = () => {
             justifyContent: "space-evenly",
           }}
         >
-          <div className="app" id="fe">
+          <Box className="app" id="fe">
             <FrontEnd />
             <Button
               style={mobile ? { display: "block" } : { display: "none" }}
@@ -51,8 +51,8 @@ const CarouselComponent = () => {
             >
               Back to Top
             </Button>
-          </div>
-          <div className="app" id="be">
+          </Box>
+          <Box className="app" id="be">
             <BackEnd />
             <Button
               style={mobile ? { display: "block" } : { display: "none" }}
@@ -60,8 +60,8 @@ const CarouselComponent = () => {
             >
               Back to Top
             </Button>
-          </div>
-          <div className="app" id="fs">
+          </Box>
+          <Box className="app" id="fs">
             <FullStack />
             <Button
               style={mobile ? { display: "block" } : { display: "none" }}
@@ -69,9 +69,9 @@ const CarouselComponent = () => {
             >
               Back to Top
             </Button>
-          </div>
+          </Box>
         </Grid>
-      </Container>
+      </Box>
     </section>
   );
 };
