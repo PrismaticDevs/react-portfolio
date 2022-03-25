@@ -4,10 +4,31 @@ import Resume from "../files/Resume 2022.pdf";
 const About = () => {
   return (
     <section>
-      <Container sx={{ mt: 10 }}>
+      <Container
+        sx={{
+          mt: 10,
+        }}
+      >
         <Grid>
           <Typography
             sx={{ display: "flex", justifyContent: "center" }}
+            variant="h3"
+          >
+            Summary
+          </Typography>
+          <Typography sx={{ fontSize: "1.5em" }}>
+            Full Stack Web Developer with a background as a digital media and
+            video production instructor. Ensuring technical application
+            development that conforms to modern business needs and UI/UX
+            standards. Known among staff for staying late at the office fixing
+            bugs in applications.
+          </Typography>
+          <Typography
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              marginTop: ".5em",
+            }}
             variant="h3"
           >
             Work Experience
@@ -43,9 +64,9 @@ const About = () => {
             </ListItem>
           </List>
           <List>
-            <Typography variant="h3">Educator at Denver Public</Typography>
-            <Typography variant="h4">Schools Denver, CO</Typography>
-            <Typography variant="h5">June 2014 - April 2018</Typography>
+            <Typography variant="h4">Educator at Denver Public</Typography>
+            <Typography variant="h5">Schools Denver, CO</Typography>
+            <Typography variant="h6">June 2014 - April 2018</Typography>
             <ListItem>
               Career Technology Teacher at Noel Community Arts School Middle
               School (2017-2018)
@@ -58,14 +79,14 @@ const About = () => {
             </ListItem>
           </List>
           <List>
-            <Typography variant="h3">
+            <Typography variant="h4">
               Founder and CEO at Brink Media LLC (2017-2019)
             </Typography>
-            <Typography variant="h4">March 2017 - October 2019</Typography>
+            <Typography variant="h5">March 2017 - October 2019</Typography>
             <ListItem>
               Video, Web Design, Graphic Design, and Digital Marketing Services
             </ListItem>
-            <ListItem variant="h5">
+            <ListItem variant="h6">
               Management of Design, Marketing and Sales, and Core Business
               Operations
             </ListItem>
@@ -75,10 +96,32 @@ const About = () => {
             <ListItem>Meeting Scheduling and Facilitation</ListItem>
             <ListItem>Financial Reports and Projections</ListItem>
           </List>
-          <div>
-            <a href={Resume} download>
-              Download as PDF
-            </a>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              marginBottom: "5em",
+            }}
+          >
+            <button className="btn">
+              <a
+                href={Resume}
+                style={{
+                  padding: "1em",
+                  background: "#131e5b",
+                  color: "white",
+                  border: "none",
+                  outline: "none",
+                  cursor: "pointer",
+                  fontSize: "1.5em",
+                  borderRadius: ".5em",
+                  textDecoration: "none",
+                }}
+                download
+              >
+                Download as PDF
+              </a>
+            </button>
           </div>
         </Grid>
       </Container>
