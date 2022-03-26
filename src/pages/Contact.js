@@ -48,7 +48,7 @@ const CarouselComponent = () => {
         </Grid>
         <Typography
           sx={{
-            fontSize: "1.5rem",
+            fontSize: "2.5rem",
             textAlign: "center",
             marginTop: 5,
           }}
