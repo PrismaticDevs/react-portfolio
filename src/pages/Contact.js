@@ -49,7 +49,6 @@ const CarouselComponent = () => {
         <Typography
           sx={{
             fontSize: "1.5rem",
-            color: "#131e5b",
             textAlign: "center",
             marginTop: 5,
           }}
