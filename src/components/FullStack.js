@@ -14,6 +14,7 @@ import { autoPlay } from "react-swipeable-views-utils";
 import techBlog from "../img/tech-blog.jpg";
 import pms from "../img/project-management.png";
 import notes from "../img/notes-app.jpg";
+import code from "../img/code-in-mind.jpg";
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
@@ -44,6 +45,15 @@ const fullStack = [
     app: "https://prismatic-note-taker.herokuapp.com/",
     code: "https://github.com/prismaticdevs/Note_Taker",
     src: notes,
+  },
+  {
+    title: "Code in Mind",
+    description:
+      "This full stack application is deployed with Heroku. It used React.js for the front end, MongoDB for the back end, and GraphQL for a back end API. This application allows an administrator to create or delete courses. It also allows for people to sign up and login to this app, and register for courses.",
+    technology: ["React.js", "GraphQL", "MongoDB"],
+    app: "https://prismatic-code-in-mind.herokuapp.com/",
+    code: "https://github.com/PrismaticDevs/code_in_mind",
+    src: code,
   },
 ];
 
