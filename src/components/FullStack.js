@@ -14,7 +14,7 @@ import { autoPlay } from "react-swipeable-views-utils";
 import techBlog from "../img/tech-blog.jpg";
 import pms from "../img/project-management.png";
 import notes from "../img/notes-app.jpg";
-import code from "../img/code-in-mind.jpg";
+import code from "../img/code-in-mind.png";
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
@@ -212,7 +212,7 @@ function SwipeableTextMobileStepper() {
             </Button>
           }
         />
-        {/* Crypto Cocktails Modal */}
+        {/* App Modal */}
         <Modal
           open={open}
           onClose={handleClose}
@@ -226,6 +226,11 @@ function SwipeableTextMobileStepper() {
             <Typography id="modal-modal-description" sx={{ mt: 2 }}>
               {fullStack[activeStep].description}
             </Typography>
+            {/* <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+              {fullStack[activeStep].technology.map((tech) => {
+                return <Typography key={tech}>{tech}</Typography>;
+              })}
+            </Typography> */}
           </Box>
         </Modal>
       </Box>
