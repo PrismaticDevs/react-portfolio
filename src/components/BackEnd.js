@@ -21,7 +21,7 @@ const backEnd = [
     title: "Team Profile Generator",
     description:
       "This Node.js console application takes user input about a developer team and then creates an HTML document styled with Bootstrap to display the team roster.",
-    technology: ["JavaScript"],
+    technology: ["Node.js", "Inquirer.js"],
     code: "https://github.com/prismaticdevs/Team-Profile-Generator/",
     src: profileGenerator,
   },
@@ -29,7 +29,7 @@ const backEnd = [
     title: "README Generator",
     description:
       "This Node.js console application takes user input about a user's GitHub repository and generates a README.md file based on the user's answers.",
-    technology: [],
+    technology: ["Node.js", "Inquirer.js"],
     code: "https://github.com/prismaticdevs/README-Generator",
     src: readMeGenerator,
   },
@@ -182,7 +182,7 @@ function SwipeableTextMobileStepper() {
             </Button>
           }
         />
-        {/* Crypto Cocktails Modal */}
+        {/* Info Modal */}
         <Modal
           open={open}
           onClose={handleClose}
@@ -196,6 +196,15 @@ function SwipeableTextMobileStepper() {
             <Typography id="modal-modal-description" sx={{ mt: 2 }}>
               {backEnd[activeStep].description}
             </Typography>
+            <Box
+              id="modal-modal-description"
+              sx={{ mt: 2, textAlign: "center" }}
+            >
+              <u>Technologies:</u>
+              {backEnd[activeStep].technology.map((tech) => {
+                return <Typography key={tech}>{tech}</Typography>;
+              })}
+            </Box>
           </Box>
         </Modal>
       </Box>

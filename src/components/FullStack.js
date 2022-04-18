@@ -23,7 +23,7 @@ const fullStack = [
     title: "Tech Blog",
     description:
       "This full stack Node.js and Express.js application is deployed with Heroku. This application allows one to create, edit, and delete blog posts by saving the posts to a MySQL database using the NPM module Sequelize.",
-    technology: ["JavaScript"],
+    technology: ["Express.js", "Express-session", "Handlebars"],
     app: "https://prismatic-tech-blog.herokuapp.com/",
     code: "https://github.com/PrismaticDevs/tech_blog",
     src: techBlog,
@@ -32,7 +32,13 @@ const fullStack = [
     title: "Project Management System",
     description:
       "This full stack Node.js and Express.js application is deployed with Heroku. This application allows one to create projects, add tasks to projects, delete tasks from projects, and delete projects. This app uses Bootstrap CSS and Handlebarsjs for the front end. This app uses a MySQL database and Sequelize to configure the back end Express.js API.",
-    technology: ["JavaScript"],
+    technology: [
+      "Express.js",
+      "Handlebars",
+      "Bootstrap CSS",
+      "MySQL",
+      "Sequelize",
+    ],
     app: "https://prismatic-project-management.herokuapp.com/",
     code: "https://github.com/PrismaticDevs/proManagementSyst",
     src: pms,
@@ -41,7 +47,7 @@ const fullStack = [
     title: "Note Taker",
     description:
       "This full stack Node.js application is deployed with Heroku. This application allows one to create and delete notes by saving the notes to a JSON file that is written to the user's computer by this Node.js application.",
-    technology: ["JavaScript"],
+    technology: ["Express.js", "CSS"],
     app: "https://prismatic-note-taker.herokuapp.com/",
     code: "https://github.com/prismaticdevs/Note_Taker",
     src: notes,
@@ -50,7 +56,7 @@ const fullStack = [
     title: "Code in Mind",
     description:
       "This full stack application is deployed with Heroku. It used React.js for the front end, MongoDB for the back end, and GraphQL for a back end API. This application allows an administrator to create or delete courses. It also allows for people to sign up and login to this app, and register for courses.",
-    technology: ["React.js", "GraphQL", "MongoDB"],
+    technology: ["React.js", "GraphQL", "MongoDB", "Material UI"],
     app: "https://prismatic-code-in-mind.herokuapp.com/",
     code: "https://github.com/PrismaticDevs/code_in_mind",
     src: code,
@@ -226,11 +232,15 @@ function SwipeableTextMobileStepper() {
             <Typography id="modal-modal-description" sx={{ mt: 2 }}>
               {fullStack[activeStep].description}
             </Typography>
-            {/* <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+            <Box
+              id="modal-modal-description"
+              sx={{ mt: 2, textAlign: "center" }}
+            >
+              <u>Technologies:</u>
               {fullStack[activeStep].technology.map((tech) => {
                 return <Typography key={tech}>{tech}</Typography>;
               })}
-            </Typography> */}
+            </Box>
           </Box>
         </Modal>
       </Box>

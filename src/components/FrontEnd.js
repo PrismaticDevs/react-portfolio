@@ -25,7 +25,7 @@ const frontEnd = [
     title: "Crypto and Cocktails",
     description:
       "This application fetches current cryptocurrency prices and gives the user a random cocktail recipe. 3 APIs are used to fetch the data. The cryptocurrency price data is fetched from Coinbase.com's API. In order to display the icons for select coins we used the Coingecko API. Lastly we used the API from Cocktail DB to display the recipe for a random cocktail after the user searches for a cryptocurrency.",
-    technology: ["JavaScript"],
+    technology: ["jQuery", "jQueryUI", "Materialize CSS", "HTML", "CSS"],
     app: "https://prismaticdevs.github.io/crypto-cocktails/",
     code: "https://github.com/prismaticdevs/crypto-cocktails",
     src: crypto,
@@ -34,7 +34,7 @@ const frontEnd = [
     title: "Day Planner",
     description:
       "This application allows the user to enter and save events ino a daily planner. The events you enter are saved onto your local computer and will remain in the application until you change or erase them. The app displays the current date and the time slots according to the current time. If a time slot already occurred it's gray, if it's in the fuure it's green, and if he time slot is the curren time it is pink",
-    technology: [],
+    technology: ["jQuery", "HTML", "CSS"],
     app: "https://prismaticdevs.github.io/day-planner/",
     code: "https://github.com/prismaticdevs/day-planner/tree/master",
     src: planner,
@@ -43,7 +43,7 @@ const frontEnd = [
     title: "Vue.js Reaction Timer",
     description:
       "This application sees how quickly a user can click a button once it appears. he app displays the speed at which the button was clicked as well as displaying a message based on the speed he button was clicked at.",
-    technology: [],
+    technology: ["Vue.js"],
     app: "https://prismatic-reaction-timer.netlify.app/",
     code: "https://github.com/PrismaticDevs/reaction-timer/tree/master",
     src: reaction,
@@ -52,7 +52,7 @@ const frontEnd = [
     title: "Weather Dashboard",
     description:
       "This application fetches current and 5 day weather forecast data from the Open Weather API. Users can enter the city in any country they want to see the weather for. The data that is returned displays the curren weather along with a 5 day forecast. Icons are also displayed to represent the current or projected weather forecast.",
-    technology: [],
+    technology: ["jQuery", "HTML", "CSS"],
     app: "https://prismaticdevs.github.io/weather_dashboard/",
     code: "https://github.com/PrismaticDevs/weather_dashboard",
     src: weather,
@@ -61,7 +61,7 @@ const frontEnd = [
     title: "Vue.js Tic Tac Toe",
     description:
       "This application is allow the user to play tic tac toe keeping rack of X and Y's wins. There is also a button to reset the score back to 0.",
-    technology: [],
+    technology: ["Vue.js"],
     app: "https://primatic-tic-tac-toe.netlify.app/",
     code: "https://github.com/prismaticdevs/TicTacToe/tree/master",
     src: ticTacToe,
@@ -69,7 +69,7 @@ const frontEnd = [
   {
     title: "Password Generator",
     description: `This application allows a user to generate a random password. The user is first prompted if they want uppercase letters, numbers, or special characters. The user also must type in a numerical length. If the user fails to provide a numerical length, the process starts over. After the user responds to the prompts, the password is randomly generated and displayed on the screen. The user can then click the "Copy to Clipboard" button and the password will be copied.`,
-    technology: [],
+    technology: ["JavaScript", "HTML", "CSS"],
     app: "  https://prismaticdevs.github.io/password_generator/",
     code: "https://github.com/prismaticdevs/password_generator/tree/master",
     src: generator,
@@ -245,6 +245,15 @@ function SwipeableTextMobileStepper() {
             <Typography id="modal-modal-description" sx={{ mt: 2 }}>
               {frontEnd[activeStep].description}
             </Typography>
+            <Box
+              id="modal-modal-description"
+              sx={{ mt: 2, textAlign: "center" }}
+            >
+              <u>Technologies:</u>
+              {frontEnd[activeStep].technology.map((tech) => {
+                return <Typography key={tech}>{tech}</Typography>;
+              })}
+            </Box>
           </Box>
         </Modal>
       </Box>
