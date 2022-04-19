@@ -17,6 +17,8 @@ const style = {
   },
 };
 
+const isMobile = window.innerWidth < 900;
+
 const Navbar = () => {
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
@@ -51,37 +53,48 @@ const Navbar = () => {
           <ImportantDevicesIcon sx={{ mr: 1 }} />
           Matthew Brignola
         </Typography>
-        <IconButton
-          size="large"
-          edge="start"
-          color="inherit"
-          aria-label="menu"
-          style={style.menu}
-          onClick={handleMenu}
-          sx={{ mr: 2 }}
-        >
-          <MenuIcon />
-        </IconButton>
-        <Menu
-          id="menu-appbar"
-          anchorEl={anchorEl}
-          anchorOrigin={{
-            vertical: "top",
-            horizontal: "right",
-          }}
-          keepMounted
-          transformOrigin={{
-            vertical: "top",
-            horizontal: "right",
-          }}
-          open={open}
-          onClose={() => setAnchorEl(null)}
-        >
-          <MenuItem onClick={() => goAbout()}>About</MenuItem>
-          <MenuItem onClick={() => goApps()}>Apps</MenuItem>
-          <MenuItem onClick={() => goResume()}>Resume</MenuItem>
-          <MenuItem onClick={() => goContact()}>Contact</MenuItem>
-        </Menu>
+        {isMobile ? (
+          <>
+            <IconButton
+              size="large"
+              edge="start"
+              color="inherit"
+              aria-label="menu"
+              style={style.menu}
+              onClick={handleMenu}
+              sx={{ mr: 2 }}
+            >
+              <MenuIcon />
+            </IconButton>
+            <Menu
+              id="menu-appbar"
+              anchorEl={anchorEl}
+              anchorOrigin={{
+                vertical: "top",
+                horizontal: "right",
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: "top",
+                horizontal: "right",
+              }}
+              open={open}
+              onClose={() => setAnchorEl(null)}
+            >
+              <MenuItem onClick={() => goAbout()}>About</MenuItem>
+              <MenuItem onClick={() => goApps()}>Apps</MenuItem>
+              <MenuItem onClick={() => goResume()}>Resume</MenuItem>
+              <MenuItem onClick={() => goContact()}>Contact</MenuItem>
+            </Menu>
+          </>
+        ) : (
+          <>
+            <MenuItem onClick={() => goAbout()}>About</MenuItem>
+            <MenuItem onClick={() => goApps()}>Apps</MenuItem>
+            <MenuItem onClick={() => goResume()}>Resume</MenuItem>
+            <MenuItem onClick={() => goContact()}>Contact</MenuItem>
+          </>
+        )}
       </Toolbar>
     </AppBar>
   );
