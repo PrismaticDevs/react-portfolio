@@ -249,7 +249,6 @@ function SwipeableTextMobileStepper() {
               id="modal-modal-description"
               sx={{ mt: 2, textAlign: "center" }}
             >
-              <u>Technologies:</u>
               {frontEnd[activeStep].technology.map((tech) => {
                 return <Typography key={tech}>{tech}</Typography>;
               })}
