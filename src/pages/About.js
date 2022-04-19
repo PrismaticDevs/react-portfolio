@@ -7,7 +7,7 @@ const alt = "Image Unavailable";
 const About = () => {
   return (
     <Container sx={{ mt: 10, display: "flex", justifyContent: "center" }}>
-      <Grid>
+      <Grid item>
         <div className="item">
           <Box
             component="img"
