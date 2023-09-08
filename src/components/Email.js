@@ -48,7 +48,7 @@ const Email = () => {
           setName("");
         },
         (error) => {
-          console.log(error.text);
+          alert(`Issue connecting to email server: Failed to send. ${error} `);
         }
       );
   };
